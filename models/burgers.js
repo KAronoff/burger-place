@@ -6,7 +6,7 @@ const conenction = require("./connection");
 
 const findAll = () => {
   return new Promise ((resolve, reject) => {
-    conenction.query("SELECT * FROM burgers", function(err, dbBurgersData){
+    conenction.query("SELECT * FROM burgers", function(err, dbBurgerData){
       if (err){
         // this will throw to a .catch
         return reject(err);

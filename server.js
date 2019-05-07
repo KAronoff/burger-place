@@ -2,7 +2,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 
-const app = express();
+var app = express();
 const PORT = process.env.PORT || 3000;
 
 // set up necessarily middleware
