@@ -6,8 +6,17 @@
   {{!-- start rwo one --}}
   <div class="row">
 
-{{!-- start add a cat area --}}
-
+  {{!-- start add a cat area --}}
+  <div class="col-12 md-col-12">
+    {{!-- start form --}}
+    <form id="burgerAdd">
+      <input class="form-control" id="name-input" placeholder="Burger Name"/>
+        <button class="btn btn-success btn-block" type="submit">
+          Add Yo' Burger
+        </button>
+    </form>
+    {{!-- end form --}}
+  </div>
 {{!-- end add a cat area --}}
   </div>
   {{!-- end row one --}}
@@ -16,8 +25,27 @@
   <div class="row">
 {{!-- start display area for burgers  --}}
   {{!-- with each burger include a "devour" button --}}
-
-{{!-- end display area for burgers --}}
+  <div class="col-12 col-md-12">
+    <h2>
+      Burgers
+    </h2>
+    {{!-- start burger list --}}
+    <ul>
+      {{#each burgerData}}
+      <li class="list-group-item">
+        {{name}} 
+          <button 
+            data-id="{{id}}"
+            data-devoured="true"
+            class="btn btn-sm btn-info updateDevoured"
+            >
+          Om nom nom
+          </button>
+      {{/each}}
+    </ul>
+    {{!-- end burger list --}}
+  </div>
+  {{!-- end display area for burgers --}}
   </div>
   {{!-- end row 2 --}}
 </div>
