@@ -17,6 +17,7 @@ module.exports = app => {
   app.post("/api/burgers", function(req, res) {
     // pass req.body into create method 
     // req.body => {name: "catty cat"}
+    console.log('hit post');
     cats.create(req.body)
       .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {

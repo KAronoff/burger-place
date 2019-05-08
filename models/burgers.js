@@ -76,7 +76,7 @@ const remove = (burgerId) => {
         return reject({message: "You might have used the wrong ID"});
       }
       else {
-        return resolve(dbBurgersId);
+        return resolve(dbBurgerData.Id);
       }
     });
   });
